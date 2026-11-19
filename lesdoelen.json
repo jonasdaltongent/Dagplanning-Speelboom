@@ -1,0 +1,33 @@
+{
+  "lesid": "dagplanning-speelboom",
+  "lesnr": "07",
+  "titel": "Een dagplanning in een tabel",
+  "week": 12,
+  "schooljaar": "2026-2027",
+  "datum": "2026-11-23",
+  "_opmerking_datum": "Maandag 23 november 2026, 9de lesuur (15.25–16.15) in lokaal 18, volgens het rooster van 25-09-2026 en de antwoorden op de beginvragen (19-11-2026). Pas aan als de les verschuift.",
+  "klasgroepen": [
+    "3 MW"
+  ],
+  "_opmerking_klasgroepen": "De klasgroepcode moet '3 MW' zijn: daarmee telt het blad '3 Maatschappij en welzijn' de regels op. De echte klasnaam staat hieronder.",
+  "klasnaam": "3MWb",
+  "finaliteit": "dubbele finaliteit",
+  "lesduur_minuten": 50,
+  "evaluatie": "formatief",
+  "deadline": "2026-11-27T20:00",
+  "bron": "https://github.com/jonasdaltongent/Dagplanning-Speelboom",
+  "doelen": [
+    {
+      "code": "BV2_04.02",
+      "rol": "kern"
+    },
+    {
+      "code": "BK2_01.02.03",
+      "rol": "ondersteunend"
+    },
+    {
+      "code": "BK2_02.14.01",
+      "rol": "contextueel"
+    }
+  ]
+}

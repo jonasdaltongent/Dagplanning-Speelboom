@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lespagina · Les 7 · Een dagplanning in een tabel · De Speelboom</title>
+  <link rel="icon" href="assets/logos/lespagina-icon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-storage="dagplanning-speelboom_v1_" data-modus-start="kort" data-laatste-stap="4" data-ai-hulp="uit">
+
+<!-- Pictogrammen: eenvoudige lijntekeningen, eigen werk. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4 2.5 4H5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2a5 5 0 0 1 5 5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M4 14v6h16v-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10.5V6a1.5 1.5 0 0 1 3 0v7.5"/><path d="M8 11.5l-1.5-1.5a1.6 1.6 0 0 0-2.3 2.3l3.6 4.2A6.5 6.5 0 0 0 17 13.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<div class="teacher-banner">Leraarweergave: de roze kaders tonen waar je een screenshot kan plaatsen. Leerlingen zien die kaders niet.</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" title="Naar het begin van de les">
+      <img src="assets/speelboom-logo.svg" alt="De Speelboom">
+      <span class="brand-lesson">Les 7 · Een dagplanning in een tabel</span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <img class="dalton-mark" src="assets/dalton-gent-logo.png" alt="GO! Dalton Gent">
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ============ LINKS: de route ============ -->
+  <nav class="route" aria-label="Stappenplan">
+    <p class="route-title">Stappenplan</p>
+    <button class="nav-btn" type="button" data-step="start"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="nav-lbl">Start</span></button>
+    <button class="nav-btn" type="button" data-step="1"><span class="nav-num"><span class="nav-n">1</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Van briefje naar tabel</span></button>
+    <button class="nav-btn" type="button" data-step="2"><span class="nav-num"><span class="nav-n">2</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Een rij erbij en opmaken</span></button>
+    <button class="nav-btn" type="button" data-step="3"><span class="nav-num"><span class="nav-n">3</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Waarom een tabel?</span></button>
+    <button class="nav-btn" type="button" data-step="4"><span class="nav-num"><span class="nav-n">4</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Inleveren</span></button>
+    <button class="nav-btn extra" type="button" data-step="extra"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="nav-lbl">Extra</span></button>
+  </nav>
+
+  <!-- ============ MIDDEN: één stap tegelijk ============ -->
+  <main id="main">
+
+    <!-- ===== START ===== -->
+    <section class="pane" id="pane-start" aria-labelledby="h-start">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-where">Toegepaste Informatica · les 7</span></div>
+            <h1 id="h-start">Een dagplanning in een tabel</h1>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_welkom.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Lien van De Speelboom wil de namiddag van woensdag 2 december aan de muur hangen. Jij zet haar briefje in een tabel.</p>
+
+          <h2 class="sec">Wat heb je nodig?</h2>
+          <ol class="nodig">
+            <li class="nodig-item">
+              <div class="mock mock-opdracht" aria-hidden="true"><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Les 7 — Een dagplanning in een tabel</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina · Les 7</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip"><img class="logo" src="assets/logos/docs.svg" alt=""><span>Dagplanning-Eekhoorns</span></div><div class="mo-knop">Inleveren</div></div></div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/classroom.svg" alt="">De opdracht in Google Classroom</p>
+              <p class="nodig-uitleg">Hier begin je. Hier lever je in.</p>
+            </li>
+            <li class="nodig-item">
+              <div class="mock mock-lespagina" aria-hidden="true">
+                <div class="ml-balk"></div>
+                <div class="ml-midden">
+                  <div class="ml-route"><span></span><span></span><span></span><span></span></div>
+                  <div class="ml-stap"><span class="ml-tag">Stap 1</span><span class="ml-lijn"></span><span class="ml-lijn kort"></span><span class="ml-lijn"></span></div>
+                </div>
+                <div class="ml-hier">Je bent hier</div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/lespagina.webp" alt="">Deze lespagina</p>
+              <p class="nodig-uitleg">Hier lees je wat je moet doen.</p>
+            </li>
+            <li class="nodig-item inleveren">
+              <div class="mock mock-werkdocument" aria-hidden="true">
+                <div class="mw-balk"><img class="logo" src="assets/logos/docs.svg" alt="">Dagplanning-Eekhoorns</div>
+                <div class="mw-blad">
+                  <div class="mw-venster">
+                    <div class="mw-kop">Deel 1 — Van briefje naar tabel</div>
+                    <div class="mw-rijen"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/docs.svg" alt="">Je werkdocument Dagplanning-Eekhoorns</p>
+              <p class="nodig-uitleg">Hier werk je. Dit lever je in.</p>
+            </li>
+          </ol>
+
+          <h2 class="sec">Dit maak je vandaag</h2>
+          <div class="vandaag">
+            <div class="dagplan" role="img" aria-label="Tekening van een opgemaakte dagplanning van een andere dag, maandag 30 november: de titel in het vet boven een tabel met een lichtgroene koprij Uur, Activiteit, Waar en Wie en vier rijen."><p class="dp-titel">Dagplanning De Eekhoorns – maandag 30 november</p><table class="dp-tabel"><tr><th>Uur</th><th>Activiteit</th><th>Waar</th><th>Wie</th></tr><tr><td>12.00</td><td>Soep eten</td><td>refter</td><td>Sam</td></tr><tr><td>13.15</td><td>Spelletjes spelen</td><td>speelzaal</td><td>Lien</td></tr><tr><td>15.15</td><td>Vieruurtje</td><td>refter</td><td>Lien</td></tr><tr><td>16.30</td><td>Voetballen</td><td>sportzaal</td><td>Sam</td></tr></table></div>
+            <p>Een opgemaakte dagplanning, van een andere dag.</p>
+          </div>
+
+          <h2 class="sec">Na deze les kan je</h2>
+          <ul class="doelen">
+            <li>een tabel invoegen en invullen;</li>
+            <li>een rij erbij zetten en opmaken;</li>
+            <li>uitleggen waarom een tabel beter is.</li>
+          </ul>
+
+          <h2 class="sec">Vast? Probeer het in deze volgorde</h2>
+          <ol class="vast">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg><span>Het infokader in je werkdocument, of <em>Toon stapjes</em></span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Je buur</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg><span>Je leraar</span></li>
+          </ol>
+
+          <p class="start-cta"><button class="btn btn-primary" type="button" data-goto="1">Start met stap 1 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></p>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 1 ===== -->
+    <section class="pane" id="pane-1" aria-labelledby="h-1">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 1</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 1</span></div><h2 id="h-1">Van briefje naar tabel</h2></header>
+        <div class="card-body">
+          <p class="intro">Het briefje van Lien wordt een tabel in je werkdocument.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Klik op de eerste lege regel.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik op de eerste lege regel onder <em>▶ Maak hier je dagplanning</em>.</p><div class="dagplan" role="img" aria-label="Tekening van het werkdocument. Onder de regel Maak hier je dagplanning staan twee lege regels. De eerste staat in een rood kader."><p class="dp-pijl">▶  Maak hier je dagplanning</p><p class="dp-leeg wijs"></p><p class="dp-leeg"></p></div></li>
+</ol>
+</details><span class="sub">Hier staat geen blauw vak: typ gewoon op de lege regel.</span></li>
+<li><span class="doe-tekst">Typ de titel en druk op <strong>Enter</strong>.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Kies <span class="ui">Invoegen</span> › <span class="ui">Tabel</span>, 4 × 7.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik bovenaan op <span class="ui">Invoegen</span>.</p><div class="menubalk" role="img" aria-label="Tekening van de menubalk bovenaan in Google Documenten. Het menu Invoegen staat in een rood kader."><i></i><i></i><span class="mb-aan wijs">Invoegen</span><i></i><i></i></div></li>
+<li><p>Klik op <span class="ui">Tabel</span>.</p><div class="teken-ui kolom menu" role="img" aria-label="Tekening van het menu Invoegen. De keuze Tabel staat in een rood kader."><div class="t-rij"><span>Afbeelding</span></div><div class="t-rij wijs"><span>Tabel</span></div><div class="t-rij"><span>Tekening</span></div></div></li>
+<li><p>Beweeg over het raster: 4 vakjes naar rechts en 7 naar beneden. Klik.</p><div class="raster" role="img" aria-label="Tekening van het raster van Invoegen, Tabel. De vakjes die blauw zijn, tellen 4 vakjes naar rechts en 7 naar beneden. Ze staan in een rood kader."><div class="ra-net"><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="ra-kader"></span></div><p class="ra-tekst">4 naar rechts, 7 naar beneden</p></div></li>
+</ol>
+</details><span class="sub">Met <strong>Tab</strong> ga je naar de volgende cel.</span></li>
+<li><span class="doe-tekst">Maak deel 1 in je werkdocument.</span></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat je titel in een cel van de tabel?</strong> Typ ze op de regel boven de tabel.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="start"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Start</button><button class="btn btn-primary" type="button" data-goto="2">Stap 2 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 2 ===== -->
+    <section class="pane" id="pane-2" aria-labelledby="h-2">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 2</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 2</span></div><h2 id="h-2">Een rij erbij en opmaken</h2></header>
+        <div class="card-body">
+          <p class="intro">Het vieruurtje komt erbij, en je dagplanning wordt netjes.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Rechtsklik in de rij van 14.30.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Rechtsklik in een cel van de rij met 14.30.</p></li>
+<li><p>Klik op <span class="ui">Rij onder invoegen</span>.</p><div class="teken-ui kolom menu" role="img" aria-label="Tekening van het menu dat opent als je met de rechtermuisknop in een cel klikt: Rij boven invoegen, Rij onder invoegen in een rood kader, Kolom links invoegen en Kolom rechts invoegen."><div class="t-rij"><span>Rij boven invoegen</span></div><div class="t-rij wijs"><span>Rij onder invoegen</span></div><div class="t-rij"><span>Kolom links invoegen</span></div><div class="t-rij"><span>Kolom rechts invoegen</span></div></div></li>
+</ol>
+</details><span class="sub">Staat de nieuwe rij op de verkeerde plaats? Druk op <strong>Ctrl + Z</strong>.</span></li>
+<li><span class="doe-tekst">Typ het vieruurtje in de nieuwe rij.</span></li>
+<li><span class="doe-tekst">Selecteer de titel. Druk op <strong>Ctrl + B</strong>.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Selecteer de hele koprij.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in de eerste cel van de koprij en sleep naar de laatste cel.</p><div class="dagplan" role="img" aria-label="Tekening van de dagplanning. De hele koprij is geselecteerd, in een rood kader."><p class="dp-titel">Dagplanning De Eekhoorns – woensdag 2 december</p><table class="dp-tabel"><tr class="gekozen wijs"><th>Uur</th><th>Activiteit</th><th>Waar</th><th>Wie</th></tr><tr><td>12.00</td><td>Boterhammen eten</td><td>refter</td><td>Lien</td></tr><tr><td>12.45</td><td>Vrij spel</td><td>speelplaats</td><td>Sam</td></tr></table></div></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Maak de koprij vet en lichtgroen.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Druk op <strong>Ctrl + B</strong>.</p></li>
+<li><p>Klik in de werkbalk op <span class="ui">Achtergrondkleur</span>.</p><div class="werkbalk" role="img" aria-label="Tekening van de werkbalk. De knop Achtergrondkleur staat in een rood kader."><div class="wb-balk"><b>B</b><em>I</em><u>U</u><span class="wb-kleur wijs"><i></i>Achtergrondkleur</span></div></div></li>
+<li><p>Kies een lichtgroene kleur.</p><div class="werkbalk" role="img" aria-label="Tekening van de werkbalk. Het palet van Achtergrondkleur is open. De lichtgroene kleur staat in een rood kader."><div class="wb-balk"><b>B</b><em>I</em><u>U</u><span class="wb-kleur"><i></i>Achtergrondkleur</span></div><div class="wb-palet"><i class="rood"></i><i class="oranje"></i><i class="geel"></i><i class="groen wijs"></i><i class="cyaan"></i><i class="blauw"></i><i class="rood"></i><i class="oranje"></i><i class="geel"></i><i class="groen"></i><i class="cyaan"></i><i class="blauw"></i></div></div></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst">Maak deel 2 in je werkdocument.</span></li>
+            </ol>
+          </div>
+          <div class="tip warn"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><strong>Is maar één cel van de koprij opgemaakt?</strong> Selecteer de hele rij en doe het opnieuw.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="1"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 1</button><button class="btn btn-primary" type="button" data-goto="3">Stap 3 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 3 ===== -->
+    <section class="pane" id="pane-3" aria-labelledby="h-3">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 3</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 3</span></div><h2 id="h-3">Waarom een tabel?</h2></header>
+        <div class="card-body">
+          <p class="intro">Je zoekt iets terug in je dagplanning en bekijkt de planning van Sam.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst">Maak deel 3 in je werkdocument.</span></li>
+            </ol>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="2"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 2</button><button class="btn btn-primary" type="button" data-goto="4">Inleveren <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 4 ===== -->
+    <section class="pane" id="pane-4" aria-labelledby="h-4">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-step">Stap 4</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg> Inleveren</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 4</span></div>
+            <h2 id="h-4">Inleveren</h2>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_inleveren.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Beantwoord eerst de drie vragen: zijn ze allemaal juist, dan zie je hoe je inlevert.</p>
+          <div class="quiz">
+            <div class="quiz-q" data-ok="Juist. Een rij ligt van links naar rechts, een kolom staat van boven naar onder: 16.00 is een rij, Wie is een kolom." data-nok="Nog niet. Kijk in deel 1 in het infokader: wat is een rij, en wat is een kolom?">
+              <p>1. Je zoekt wie er om 16.00 uur bij de kinderen is. Waar kijk je in je tabel?</p>
+              <div class="opts">
+                <button type="button" data-right>In de rij van 16.00, in de kolom Wie</button>
+                <button type="button">In de kolom van 16.00, in de rij Wie</button>
+                <button type="button">In de koprij</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. In elke cel staat één ding: een uur, een activiteit, een plaats of een naam." data-nok="Nog niet. Kijk in deel 1 in het infokader: wat staat er in elke cel?">
+              <p>2. Hoe zet je “Om 12.45 uur is er vrij spel op de speelplaats, met Sam.” in je tabel?</p>
+              <div class="opts">
+                <button type="button">In één cel: de hele zin</button>
+                <button type="button" data-right>In vier cellen: 12.45 · Vrij spel · speelplaats · Sam</button>
+                <button type="button">In twee cellen: het uur en de rest van de zin</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. Eerst selecteren, dan de knop. Wie maar één cel selecteert, maakt maar één cel op." data-nok="Nog niet. Kijk in stap 2: welke cellen moeten vet worden?">
+              <p>3. Je wil de hele koprij vet maken. Wat doe je eerst?</p>
+              <div class="opts">
+                <button type="button">In één cel van de koprij klikken</button>
+                <button type="button" data-right>De hele koprij selecteren</button>
+                <button type="button">De titel selecteren</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+          </div>
+          <p class="slot" aria-live="polite" data-codewoord="EEKHOORN"><svg class="ic ic-dicht" aria-hidden="true"><use href="#i-lock"/></svg><svg class="ic ic-open" aria-hidden="true"><use href="#i-check-circle"/></svg><span class="slot-tekst">Beantwoord de drie vragen hierboven juist. Dan zie je hier hoe je inlevert.</span></p>
+          <div class="todo-box" data-na-zelftest="c4z">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst">Maak deel 4 in je werkdocument.</span><span class="sub">Het codewoord staat in de groene regel hierboven.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Lever in.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik bovenaan op het tabblad <strong class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</strong>.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome. Het tabblad Google Classroom staat in een rood kader."><span class="tt-tab wijs"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 7</span><span class="tt-tab actief"><img class="logo" src="assets/logos/docs.svg" alt="">Dagplanning-Eekhoorns</span></div></li>
+<li><p>Zoek rechts, bij <strong>Jouw werk</strong>, de knop <span class="ui">Inleveren</span>. Klik erop.</p></li>
+<li><p>Klik in het venster <em>Je werk inleveren?</em> nog eens op <span class="ui">Inleveren</span>.<span class="sub">Daarna staat er rechts <em>Ingeleverd</em>.</span></p></li>
+</ol>
+</details></li>
+            </ol>
+            <figure class="clip"><video src="assets/video/inleveren.mp4" poster="assets/video/inleveren.jpg" autoplay loop muted playsinline controls preload="metadata" aria-label="Filmpje: rechts, bij Jouw werk, op Inleveren klikken; in het venster Je werk inleveren? nog eens op Inleveren klikken; daarna staat er Ingeleverd."></video><figcaption>Filmpje van 10 seconden: zo lever je in. Het is een andere opdracht, de knoppen zijn dezelfde.</figcaption></figure>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="3"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 3</button><button class="btn btn-primary" type="button" data-goto="extra">Extra <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== EXTRA ===== -->
+    <section class="pane" id="pane-extra" aria-labelledby="h-extra">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-extra">Extra · niet verplicht</span></div><h2 id="h-extra">Een tweede dagplanning</h2></header>
+        <div class="card-body">
+          <p class="intro">Alleen als je ingeleverd hebt en tijd over hebt. Het telt niet mee.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst">Maak het Extra in je werkdocument.</span><span class="sub">Je hoeft niet opnieuw in te leveren.</span></li>
+            </ol>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="4"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Inleveren</button><button class="btn" type="button" data-goto="start">Naar het begin</button></footer>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ============ RECHTS: de checklist ============ -->
+  <aside class="checklist leeg" id="checklist" aria-labelledby="h-cl">
+    <div class="cl-head">
+      <h2 id="h-cl">Checklist</h2>
+      <div class="cl-bar" role="progressbar" aria-label="Voortgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="cl-fill" id="clFill"></div></div>
+      <p class="cl-count" id="clCount">0 van 0 klaar</p>
+    </div>
+    <div class="cl-body">
+      <div class="cl-group" data-step="1"><h3>1 · Van briefje naar tabel</h3>
+        <label class="cl-item"><input type="checkbox" id="c1a"><span>Deel 1: mijn tabel met zes activiteiten</span></label>
+      </div>
+      <div class="cl-group" data-step="2"><h3>2 · Een rij erbij en opmaken</h3>
+        <label class="cl-item"><input type="checkbox" id="c2a"><span>Deel 2: het vieruurtje en de opmaak</span></label>
+      </div>
+      <div class="cl-group" data-step="3"><h3>3 · Waarom een tabel?</h3>
+        <label class="cl-item"><input type="checkbox" id="c3a"><span>Deel 3: vraag 2 en 3</span></label>
+      </div>
+      <div class="cl-group" data-step="4"><h3>4 · Inleveren</h3>
+        <label class="cl-item"><input type="checkbox" id="c4z"><span>Zelftest: alle drie juist</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4a"><span>Deel 4: codewoord, controletabel, exitvraag</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4b"><span>Werkdocument ingeleverd</span></label>
+      </div>
+    </div>
+    <div class="cl-foot">
+      <button class="btn cl-toggle" type="button" id="clToggle" aria-expanded="false">Toon alles</button>
+      <button class="btn" type="button" id="btnReset">Vinkjes wissen</button>
+      <p class="cl-note">Je vinkjes staan alleen op deze computer. Er wordt niets doorgestuurd.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- ============ Klaar! ============ -->
+<div class="klaar-overlay" id="klaar" role="dialog" aria-modal="true" aria-labelledby="h-klaar" hidden>
+  <div class="klaar-card">
+    <img class="mascotte-klaar" src="assets/mascotte/dalton_succes.webp" alt="" width="150" height="150">
+    <h2 id="h-klaar">Je dagplanning is klaar!</h2>
+    <p>Alles is afgevinkt en ingeleverd. Heb je nog tijd? Probeer dan het <strong>Extra</strong>.</p>
+    <button class="btn btn-primary" type="button" id="klaarSluit">Sluiten</button>
+  </div>
+</div>
+
+<footer class="site">
+  Toegepaste Informatica · GO! Dalton Gent · De Speelboom is een fictieve opvang. Alle namen en berichten zijn verzonnen.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

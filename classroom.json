@@ -1,0 +1,22 @@
+{
+  "_uitleg": "Wordt gelezen door _tools/zet_opdracht_klaar.py (zie _tools/CLASSROOM-KOPPELING.md). Dit bestand staat openbaar op GitHub: zet hier nooit een e-mailadres of wachtwoord in. {deadline} vult het script zelf in; klas en deadline komen uit lesdoelen.json.",
+  "titel": "Les 7 — Een dagplanning in een tabel",
+  "onderwerp": "Module 2 — Functionele documenten voor de praktijk",
+  "instructie": [
+    "Open de lespagina en werk stap 1 tot 4 af.",
+    "Je maakt je dagplanning in je werkdocument Dagplanning-Eekhoorns.",
+    "",
+    "Klik op Inleveren, ten laatste {deadline}."
+  ],
+  "bijlagen": [
+    {
+      "soort": "link",
+      "url": "https://jonasdaltongent.github.io/Dagplanning-Speelboom/"
+    },
+    {
+      "soort": "kopie",
+      "bestand": "werkdocument/Dagplanning-Eekhoorns.docx",
+      "naam": "Dagplanning-Eekhoorns"
+    }
+  ]
+}

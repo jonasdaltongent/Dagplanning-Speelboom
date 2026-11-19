@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Een dagplanning in een tabel · dia's · De Speelboom</title>
+  <link rel="icon" href="assets/speelboom-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/slides.css">
+  <style>
+    .klok { font-size: 22px; color: #4D5573; }
+    .compact .two { flex: 0 0 auto; }
+    .compact .panel p { margin-bottom: 10px; }
+    .compact .panel p:last-child { margin-bottom: 0; }
+    .steps1 { margin: 0; padding-left: 1.2em; }
+    .steps1 li { font-size: 27px; margin-bottom: 10px; }
+    .steps1 li:last-child { margin-bottom: 0; }
+    .compact .steps1 li { font-size: 24px; margin-bottom: 5px; }
+    .qhead { font-size: 26px; font-weight: 700; margin: 0 0 6px; line-height: 1.3; }
+    .qcol .opt { font-size: 24px; padding: 7px 16px; }
+    .slide[data-answer] .answer { margin-top: 10px; padding: 10px 16px; font-size: 23px; }
+    /* dia 3: het briefje van een andere dag en de opgemaakte dagplanning ernaast */
+    .briefje { background: #FFFDF3; border: 2px solid #E3D9A8; border-left: 8px solid #E0B94A; border-radius: 12px; padding: 12px 18px; font-size: 22px; line-height: 1.3; }
+    .briefje b { color: var(--navy-deep); display: block; margin-bottom: 8px; font-size: 21px; }
+    .briefje p { margin: 0 0 8px; font-size: 21px; line-height: 1.3; }
+    .briefje p:last-child { margin-bottom: 0; }
+    .dagplan { background: #fff; border: 2px solid #A7B1DE; border-radius: 10px; font-family: Calibri, Arial, sans-serif; padding: 14px 18px 18px; box-shadow: 0 8px 24px rgba(29,35,64,.14); font-size: 24px; color: #1F1F1F; }
+    .dp-titel { font-weight: 700; margin: 0 0 10px; font-size: 23px; }
+    .dp-tabel { border-collapse: collapse; width: 100%; }
+    .dp-tabel th, .dp-tabel td { border: 2px solid #9AA0A6; padding: 7px 12px; text-align: left; font-weight: 400; font-size: 23px; }
+    .dp-tabel th { background: #D9EAD3; font-weight: 700; }
+    .kijk { font-size: 22px; color: #4D5573; margin: 10px 0 0; }
+    /* dia 4: de demo. Een tekening van Google, links; de stappen rechts. Kijk naar het rode kader. */
+    .demo { display: grid; grid-template-columns: 520px 1fr; gap: 40px; align-items: start; margin-top: 6px; }
+    .wijs { box-shadow: 0 0 0 3px #fff, 0 0 0 7px #C5221F; position: relative; }
+    .rs { background: #fff; border: 1px solid #DADCE0; border-radius: 14px; box-shadow: 0 4px 16px rgba(60,64,67,.28); padding: 22px 26px; font-family: "Segoe UI", Arial, sans-serif; color: #1F1F1F; }
+    .rs-net { display: grid; grid-template-columns: repeat(8, 40px); gap: 6px; position: relative; width: max-content; }
+    .rs-net i { display: block; width: 40px; height: 40px; border: 2px solid #C6C9CE; background: #fff; border-radius: 3px; }
+    .rs-net i.aan { background: #C9DAF8; border-color: #6E9BE8; }
+    .rs-kader { position: absolute; left: -6px; top: -6px; width: calc(4 * 40px + 3 * 6px + 12px); height: calc(7 * 40px + 6 * 6px + 12px); box-shadow: 0 0 0 5px #C5221F; border-radius: 4px; }
+    .rs-tekst { margin: 14px 0 0; font-size: 24px; color: #5F6368; text-align: center; }
+    .demo .steps1 li { font-size: 28px; margin-bottom: 18px; }
+    .demo .zo { font-size: 22px; color: #4D5573; margin: 4px 0 0; }
+    .ui { font-weight: 700; color: var(--navy-deep); background: var(--peri-soft); padding: 0 8px; border-radius: 6px; white-space: nowrap; }
+  </style>
+</head>
+<body>
+<div class="hud"><span id="counter"></span> · <kbd>→</kbd> verder · <kbd>F</kbd> volledig scherm · <kbd>N</kbd> notities</div>
+<div class="deck"><div class="stage">
+
+<!-- 1 · vaste startdia -->
+<section class="slide start">
+  <div class="start-kop">
+    <div>
+      <p class="kicker">Toegepaste Informatica · les 7</p>
+      <h1>Een dagplanning in een tabel</h1>
+    </div>
+    <span class="start-zo">Zo start je</span>
+  </div>
+  <ol class="startroute">
+    <li><div class="sr-beeld"><div class="pc-scherm"><span class="pc-avatar"></span><span class="pc-veld">••••••</span></div><div class="pc-voet"></div></div><span class="sr-tekst">Meld je aan op de computer.</span></li>
+    <li><div class="sr-beeld"><span class="url-balk"><img class="logo" src="assets/logos/classroom.svg" alt="">classroom.google.com</span><span class="url-knop">Inloggen</span></div><span class="sr-tekst">Ga in Chrome naar Classroom. Klik op <span class="knop">Inloggen</span>.</span></li>
+    <li><div class="sr-beeld"><span class="login-veld">…<b>@dalton.gent</b></span><span class="login-veld">••••••••</span></div><span class="sr-tekst">Log in met je schoolaccount.</span></li>
+    <li><div class="sr-beeld"><div class="lesgroep"><span class="lesgroep-kop">3MWb - Informatica</span></div></div><span class="sr-tekst">Klik op je lesgroep.</span></li>
+    <li><div class="sr-beeld"><div class="tabs"><span class="tab-grijs"></span><span class="tab-aan">Schoolwerk</span><span class="tab-grijs"></span></div></div><span class="sr-tekst">Klik op <span class="knop">Schoolwerk</span>.</span></li>
+    <li><div class="sr-beeld"><span class="opdr-rij"><span class="opdr-ic"></span>Les 6 — Een dagplanning in een tabel</span><span class="opdr-link">Instructies bekijken</span></div><span class="sr-tekst">Klik op de opdracht › <span class="knop">Instructies bekijken</span>.</span></li>
+    <li><div class="sr-beeld"><span class="bijl-chip aan"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 6</span></div><span class="sr-tekst">Klik op de lespagina.</span></li>
+    <li class="klaar">Klaar? Laat de lespagina open en kijk naar het bord.</li>
+  </ol>
+  <template class="note">
+    <p><strong>Instructie, 0–1'. De vaste startdia</strong> (elke les dezelfde). Laat ze op het bord staan terwijl de leerlingen aanmelden.</p>
+    <p>Het <strong>wachtwoord van de computers</strong> staat niet op de dia: de dia's staan openbaar online. Zeg het, of schrijf het op het bord.</p>
+    <p>Ga verder zodra de meesten de lespagina open hebben.</p>
+  </template>
+</section>
+
+<!-- 2 · lesstart -->
+<section class="slide met-mascotte" data-answer>
+  <img class="mascotte" src="assets/mascotte/dalton_denken.webp" alt="" width="240" height="240">
+  <p class="kicker">Lesstart · 2 minuten</p>
+  <h2>Weet je het nog?</h2>
+  <div class="qcol">
+    <p class="qhead">In les 6 kopieerde je een tabel met taken naar een gedeeld document. Wat stond er in de eerste rij?</p>
+    <div class="opts">
+      <div class="opt right"><span class="n">A</span>Taak · Wie · Klaar tegen · Klaar?</div>
+      <div class="opt"><span class="n">B</span>Alle zes de taken</div>
+      <div class="opt"><span class="n">C</span>De titel van het document</div>
+    </div>
+  </div>
+  <p class="answer">Dat is de koprij: ze zegt wat er in elke kolom staat. Vandaag maak je zelf zo'n tabel, van niets.</p>
+  <template class="note">
+    <p><strong>Lesstart (2'), ophalen uit les 6 (ma 16-11).</strong> Vraag hardop of met vingers (1, 2 of 3 voor A, B of C); druk daarna op → voor het antwoord. Het gaat om het woord <strong>koprij</strong>: <em>"Die eerste rij heet de koprij. Vandaag maak je zelf zo'n tabel, van niets."</em></p>
+    <p>Gaat het te traag, ga dan na het antwoord meteen door: de instructie is maar 10 minuten.</p>
+  </template>
+</section>
+
+<!-- 3 · lesdoel en eindproduct -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · dit maak je vandaag · kijk naar de titel, de koprij en 15.15</p>
+  <h2 style="margin-bottom:10px">Van briefje naar tabel</h2>
+  <div class="two" style="grid-template-columns: 1fr 1.25fr; gap: 28px; align-items: start">
+    <div>
+      <p style="font-size:26px; margin:0 0 14px">Je zet het briefje van Lien in een <strong>tabel</strong> en maakt ze netjes op.</p>
+      <div class="briefje"><b>Het briefje van Lien · maandag 30 november</b>
+        <p>Om 12.00 uur eten de kinderen soep in de refter, met Sam.</p>
+        <p>Om 13.15 uur spelen we spelletjes in de speelzaal, met Lien.</p>
+        <p>Om 15.15 uur eten de kinderen het vieruurtje in de refter, met Lien.</p>
+        <p>Om 16.30 uur voetballen de kinderen in de sportzaal, met Sam.</p>
+      </div>
+    </div>
+    <div class="dagplan" role="img" aria-label="Tekening van een opgemaakte dagplanning van een andere dag, maandag 30 november: de titel in het vet boven een tabel met een lichtgroene koprij Uur, Activiteit, Waar en Wie en vier rijen.">
+      <p class="dp-titel">Dagplanning De Eekhoorns – maandag 30 november</p>
+      <table class="dp-tabel">
+        <tr><th>Uur</th><th>Activiteit</th><th>Waar</th><th>Wie</th></tr>
+        <tr><td>12.00</td><td>Soep eten</td><td>refter</td><td>Sam</td></tr>
+        <tr><td>13.15</td><td>Spelletjes spelen</td><td>speelzaal</td><td>Lien</td></tr>
+        <tr><td>15.15</td><td>Vieruurtje</td><td>refter</td><td>Lien</td></tr>
+        <tr><td>16.30</td><td>Voetballen</td><td>sportzaal</td><td>Sam</td></tr>
+      </table>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 1'. Lesdoel en eindproduct.</strong> Lees de zin voor. Toon dan het briefje van een <strong>andere dag</strong> (maandag 30 november, niet de oplossing van vandaag) en de tabel ernaast: <em>"Zo wordt een briefje een tabel. Kijk naar drie dingen: de titel staat boven de tabel, de eerste rij is lichtgroen en vet, en elk uur staat op dezelfde manier: 15.15."</em></p>
+    <p>Dit is een nieuw soort tekening (een document): lees ze één keer hardop voor. Links staat de tekst die Lien schreef, rechts wat jullie ervan maken. In de tabel staat in elke cel één ding. Jullie briefje en jullie tabel zijn voor woensdag 2 december en staan in deel 1 van het werkdocument.</p>
+  </template>
+</section>
+
+<!-- 4 · demo: de tabel -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · demo · kijk naar het rode kader</p>
+  <h2 style="margin-bottom:6px">Een tabel invoegen en een rij erbij</h2>
+  <div class="demo">
+    <div class="rs" role="img" aria-label="Tekening van het raster van Invoegen, Tabel. De blauwe vakjes tellen 4 vakjes naar rechts en 7 naar beneden. Ze staan in een rood kader.">
+      <div class="rs-net"><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="rs-kader"></span></div>
+      <p class="rs-tekst">4 naar rechts, 7 naar beneden</p>
+    </div>
+    <div>
+      <ol class="steps1">
+        <li class="reveal-item">Klik onder <strong>▶ Maak hier je dagplanning</strong>. Typ de titel, druk op <strong>Enter</strong>.</li>
+        <li class="reveal-item"><span class="ui">Invoegen</span> › <span class="ui">Tabel</span>: kies 4 × 7.</li>
+        <li class="reveal-item">Typ de koprij. <strong>Tab</strong> gaat naar de volgende cel.</li>
+        <li class="reveal-item">Rechtsklik in een rij › <span class="ui">Rij onder invoegen</span>. Fout? <strong>Ctrl + Z</strong>.</li>
+      </ol>
+      <p class="zo">De koprij opmaken staat op de lespagina.</p>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 5'. Demo in je eigen kopie van het werkdocument, hardop denkend.</strong> Alleen wat nieuw is. Een nieuw soort tekening, dus lees ze hardop: <em>"Dit is het raster dat je ziet als je op Invoegen en Tabel klikt. Je beweegt met de muis over de vakjes. De blauwe vakjes zijn wat je kiest: hier 4 naar rechts en 7 naar beneden. Het rode kader toont welke."</em></p>
+    <p>Druk vier keer op → en doe elke stap in het echte document. (1) Klik op de eerste lege regel onder <strong>▶ Maak hier je dagplanning</strong>, typ de titel en druk op <strong>Enter</strong>. (2) <strong>Invoegen</strong> › <strong>Tabel</strong>, 4 naar rechts en 7 naar beneden. (3) Typ de koprij en ga met <strong>Tab</strong> naar de volgende cel; zet rij 1 uit zin 1 erin en zeg hardop: <em>"één ding per cel, het uur zonder 'uur'"</em>. (4) Rechtsklik in een rij › <strong>Rij onder invoegen</strong>, en toon meteen <strong>Ctrl + Z</strong> als de rij op een verkeerde plaats staat.</p>
+    <p><strong>Niet voordoen:</strong> de koprij opmaken. Dat staat op de lespagina, met stapjes.</p>
+  </template>
+</section>
+
+<!-- 5 · controle -->
+<section class="slide" data-answer>
+  <p class="kicker">Controle · iedereen antwoordt</p>
+  <h2>Waar komt het vieruurtje?</h2>
+  <div class="qcol">
+    <p class="qhead">Lien vergat het vieruurtje om 15.15 uur. In je tabel staan al de rijen van 14.30 en 16.00. Waar komt de nieuwe rij?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">1</span>Onderaan, onder 17.00</div>
+      <div class="opt right"><span class="n">2</span>Onder 14.30, boven 16.00</div>
+      <div class="opt"><span class="n">3</span>Bovenaan, onder de koprij</div>
+    </div>
+  </div>
+  <p class="answer">Op volgorde van het uur: tussen 14.30 en 16.00. Dus rechtsklik in de rij van 14.30 › Rij onder invoegen.</p>
+  <template class="note">
+    <p><strong>Controle (1'). Iedereen antwoordt tegelijk</strong> met 1, 2 of 3 vingers; druk daarna op → voor het antwoord. Wie 1 of 3 toont, blijft bij het begin van de keuzewerktijd bij jou: <em>"Op welke plaats zou Lien de rij zoeken?"</em></p>
+  </template>
+</section>
+
+<!-- 6 · zo werk je verder -->
+<section class="slide compact met-mascotte">
+  <img class="mascotte" src="assets/mascotte/dalton_laptop.webp" alt="" width="240" height="240">
+  <p class="kicker">Keuzewerktijd · <span class="eindtijd">40 minuten</span></p>
+  <h2>Zo werk je verder</h2>
+  <div class="two" style="grid-template-columns: 1.6fr 1fr">
+    <div>
+      <ol class="steps1 kloklijst" data-lesmomenten="2026-11-23/15.25/16.15/3MWb/9" data-beltijden="8.25-9.15 9.15-10.05 10.25-11.15 11.15-12.05 12.05-12.55 13.45-14.35 14.35-15.25 15.25-16.15 16.15-17.05">
+        <li data-min="3" data-samen>Stap 1 samen: de tabel invoegen <span class="klok tijd">samen &#10003;</span></li>
+        <li data-min="12">Van briefje naar tabel <span class="klok tijd">12'</span></li>
+        <li data-min="12">Een rij erbij en opmaken <span class="klok tijd">12'</span></li>
+        <li data-min="7">Waarom een tabel? <span class="klok tijd">7'</span></li>
+        <li data-min="6">Inleveren <span class="klok tijd">6'</span></li>
+      </ol>
+    </div>
+    <div class="panel navy">
+      <p style="font-size:24px"><strong>Vast?</strong><br>1. Het infokader in je werkdocument, of <em>Toon stapjes</em><br>2. Je buur<br>3. Ik</p>
+    </div>
+  </div>
+  <p class="klok" style="margin-top:14px;font-size:24px">
+    <strong>Alles staat in de opdracht in <span class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span></strong> <em>Les 7 — Een dagplanning in een tabel</em>: de lespagina en rechts onder <em>Jouw werk</em> je werkdocument Dagplanning-Eekhoorns.<br>Adres: jonasdaltongent.github.io/Dagplanning-Speelboom/ <!-- PAS AAN: Pages-adres --></p>
+  <template class="note">
+    <p><strong>Keuzewerktijd.</strong> Laat deze dia staan zolang ze werken. De kloktijden komen uit de planning; <strong>T</strong> rekent opnieuw vanaf nu.</p>
+    <p><strong>Stap 1 doen ze nu samen (3').</strong> Zeg: <em>"Open de lespagina en klik op stap 1. Klik op de eerste lege regel onder de pijl, typ de titel, en voeg de tabel in. Steek je duim op als ze er staat."</em> Wie op de vorige dia 1 of 3 koos, of de tabel niet geraakt, blijft 3 tot 5 minuten bij jou; de rest gaat verder met de koprij en de zes activiteiten.</p>
+    <p>Eerste rondgang (stap 1): staat de titel boven de tabel en niet erin? Staat in elke cel één ding? Wie kolommen met spaties of Tab typt, begint opnieuw met een tabel. Tweede rondgang (stap 2): staat het vieruurtje tussen 14.30 en 16.00? Is de <strong>hele</strong> koprij vet en lichtgroen, en schrijven ze 15.15 (niet kwart over drie)?</p>
+    <p><strong>Laatste minuut:</strong> noem de exitvraag in deel 4 van het werkdocument (<em>een nieuwe rij of een nieuwe kolom?</em>), en zeg mondeling dat wie niet klaar is, toch inlevert, of thuis afwerkt vóór vrijdag 27 november om 20.00 uur. Wie vraagt hoe hij inlevert: kijk eerst onder de drie vragen van de zelftest in stap 4. Wie vertrekt, logt uit of drukt op Windows + L.</p>
+  </template>
+</section>
+
+</div></div>
+<div class="notes" id="notes"></div>
+<script src="js/slides.js"></script>
+</body>
+</html>
