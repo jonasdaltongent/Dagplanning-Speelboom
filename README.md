@@ -71,8 +71,8 @@ Repository [`jonasdaltongent/Dagplanning-Speelboom`](https://github.com/jonasdal
 
 ### Stap 2 — De opdracht in Classroom, met de koppeling
 
-De opdracht staat als **concept** klaar in `3MWb - Informatica` (nog **niet ingepland**: dat doet de hoofdsessie na het nakijken, voor
-**maandag 23 november 2026 om 14.55 uur**, een half uur vóór het 9de lesuur van 15.25 uur).
+De opdracht staat als **concept** klaar in `3MWb - Informatica` en is **ingepland** (20-11-2026): Classroom publiceert ze zelf op
+**maandag 23 november 2026 om 14.55 uur**, een half uur vóór het 9de lesuur van 15.25 uur.
 
 | | Opdracht: **Les 7 — Een dagplanning in een tabel** |
 |---|---|
