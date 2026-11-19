@@ -227,26 +227,24 @@ def teken_sam(met_voetbal):
 
 
 def planning_van_sam(doc):
-    """Materiaal a van deel 3: de planning van Sam, twee keer als tekening (eerst, en nadat hij 'en voetbal' bijtypte)."""
-    t = doc.add_table(rows=5, cols=1)
-    t.alignment = hs.WD_TABLE_ALIGNMENT.CENTER
-    hs.randen(t, buiten=GRIJS_RAND, binnen="E3E3E3")
-    hs.breedtes(t, [B])
-    kop = t.rows[0].cells[0]
-    hs.schaduw(kop, "F2F6FC")
-    hs.celtekst(kop, "a · De planning van Sam, met spaties gemaakt", vet=True, grootte=11)
-    hs.hoogte(t.rows[0], 0.7)
-    labels = ["Eerst, zoals Sam ze maakte.", "Daarna, nadat Sam “en voetbal” bijtypte."]
-    for k, (rij_label, rij_beeld) in enumerate([(1, 2), (3, 4)]):
-        hs.celtekst(t.rows[rij_label].cells[0], labels[k], vet=True, kleur=hs.NAVY_DIEP, grootte=11)
-        cel = t.rows[rij_beeld].cells[0]
+    """Materiaal a van deel 3: de planning van Sam, twee keer als tekening (eerst, en nadat hij 'en voetbal' bijtypte). Elke
+    tekening staat in een eigen tabel met haar label, zodat een bladzijdewissel er nooit tussen komt."""
+    titels = ["a · De planning van Sam, met spaties gemaakt: eerst", "a · De planning van Sam, nadat hij “en voetbal” bijtypte"]
+    for k in range(2):
+        t = doc.add_table(rows=2, cols=1)
+        t.alignment = hs.WD_TABLE_ALIGNMENT.CENTER
+        hs.randen(t, buiten=GRIJS_RAND, binnen="E3E3E3")
+        hs.breedtes(t, [B])
+        hs.schaduw(t.rows[0].cells[0], "F2F6FC")
+        hs.celtekst(t.rows[0].cells[0], titels[k], vet=True, grootte=11)
+        hs.hoogte(t.rows[0], 0.7)
+        cel = t.rows[1].cells[0]
         hs.marges(cel, boven=0.15, onder=0.2, links=0.3, rechts=0.3)
         p = cel.paragraphs[0]
         hs.zonder_ruimte(p)
         p.add_run().add_picture(teken_sam(k == 1), width=hs.Cm(B - 1.0))
-    hs.niet_splitsen(t)
-    hs.ruimte(doc, 6)
-    return t
+        hs.niet_splitsen(t)
+        hs.ruimte(doc, 6)
 
 
 # De criteria van lesvoorbereiding § 22 (samen 20): 3 · 6 · 2 · 1 · 1 · 2 · 1 · 2 · 1 · 1
@@ -317,7 +315,7 @@ def werkdocument():
         "juiste plaats? En maak de planning op zoals de tabelkaart: ik hang ze maandag aan de muur. Groetjes, Lien"])
 
     # ---- Deel 3: waarom een tabel? (geen klikken)
-    hs.deel(doc, 3, "Waarom een tabel?")
+    hs.deel(doc, 3, "Waarom een tabel?", nieuwe_pagina=True)
     hs.opdracht(doc, "Gebruik je eigen dagplanning. Beantwoord vraag 2 en 3.")
     planning_van_sam(doc)
     hs.vraag(doc, "1.  Een papa belt om 12.50 uur: “Waar is mijn dochter nu?”")
