@@ -190,14 +190,15 @@ dat ze nodig heeft.
 
 - **Opdracht:** *Gebruik je eigen dagplanning. Beantwoord vraag 2 en 3.*
 - Geen infokader: de begrippen staan in deel 1.
-- **Materiaal a:** de planning van Sam met spaties, twee tekeningen: *eerst* en *nadat Sam "en voetbal" bijtypte*.
+- **Materiaal a en b:** de planning van Sam met spaties, twee tekeningen: *eerst* (a) en *nadat Sam "en voetbal"
+  bijtypte* (b).
 - **Vraag 1 (voorbeeld, grijs):** *Een papa belt om 12.50 uur: "Waar is mijn dochter nu?"* → *Rij: 12.45. Kolom: Waar.
   Antwoord: op de speelplaats.*
 - **Vraag 2:** *Een mama belt om 15.20 uur: "Waar is mijn zoon nu, en wie is bij hem?" Zoek het in je tabel. Schrijf de
   rij, de kolommen en het antwoord.* Drie kleine vakken (*Rij · Kolommen · Antwoord*).
   Verwacht: rij **15.15** · kolommen **Waar** en **Wie** · **in de refter, met Sam**. Wie het vieruurtje vergat,
   antwoordt *14.30, leeshoek, Lien*: fout, en een teken dat deel 2 niet af is.
-- **Vraag 3:** *Kijk naar de planning van Sam (a). Wat ging er mis toen hij een woord bijtypte? Waarom gebeurt dat niet in
+- **Vraag 3:** *Kijk naar de planning van Sam (a en b). Wat ging er mis toen hij een woord bijtypte? Waarom gebeurt dat niet in
   jouw tabel? Schrijf twee zinnen.*
   Verwacht: *de woorden achter "en voetbal" schoven op / de kolommen staan niet meer onder elkaar* én *in een tabel blijft
   elke kolom op haar plaats (de cel wordt groter of de tekst springt naar de volgende regel in dezelfde cel)*.

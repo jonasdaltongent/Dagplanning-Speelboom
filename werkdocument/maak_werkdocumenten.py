@@ -229,7 +229,7 @@ def teken_sam(met_voetbal):
 def planning_van_sam(doc):
     """Materiaal a van deel 3: de planning van Sam, twee keer als tekening (eerst, en nadat hij 'en voetbal' bijtypte). Elke
     tekening staat in een eigen tabel met haar label, zodat een bladzijdewissel er nooit tussen komt."""
-    titels = ["a · De planning van Sam, met spaties gemaakt: eerst", "a · De planning van Sam, nadat hij “en voetbal” bijtypte"]
+    titels = ["a · De planning van Sam, met spaties gemaakt: eerst", "b · De planning van Sam, nadat hij “en voetbal” bijtypte"]
     for k in range(2):
         t = doc.add_table(rows=2, cols=1)
         t.alignment = hs.WD_TABLE_ALIGNMENT.CENTER
@@ -324,7 +324,7 @@ def werkdocument():
     hs.vraag(doc, "2.  Een mama belt om 15.20 uur: “Waar is mijn zoon nu, en wie is bij hem?” Zoek het in je tabel. "
                   "Schrijf de rij, de kolommen en het antwoord.")
     hs.tabel(doc, ["Rij", "Kolommen", "Antwoord"], [("", "", "")], [3.4, 5.0, B - 8.4], invul=(0, 1, 2), rijhoogte=1.2)
-    hs.vraag(doc, "3.  Kijk naar de planning van Sam (a). Wat ging er mis toen hij een woord bijtypte? Waarom gebeurt dat "
+    hs.vraag(doc, "3.  Kijk naar de planning van Sam (a en b). Wat ging er mis toen hij een woord bijtypte? Waarom gebeurt dat "
                   "niet in jouw tabel? Schrijf twee zinnen.")
     hs.antwoordvak(doc, 2.2)
 
